@@ -9,27 +9,44 @@
 import SpriteKit
 import GameplayKit
 
+var screenSize = UIScreen.main.bounds
+var screenWidth = screenSize.width
+var screenHeight = screenSize.height
+
 class PlayScene: SKScene {
 
-    var planeSprite:SKSpriteNode?
+    var oceanSprite:Ocean?
+    var islandSprite:Island?
+    var planeSprite:Plane?
+    var clouds:[Cloud] = []
     
     override func didMove(to view: SKView) {
-
-        planeSprite = SKSpriteNode(imageNamed: "plane")
-        planeSprite?.position = CGPoint(x: 160, y: 240)
+        oceanSprite = Ocean()
+        self.addChild(oceanSprite!)
+        
+        islandSprite = Island()
+        self.addChild(islandSprite!)
+        
+        planeSprite = Plane()
         self.addChild(planeSprite!)
+        
+        for count in 0...2 {
+            clouds.append(Cloud())
+            self.addChild(clouds[count])
+        }
+    
     }
     
     func touchDown(atPoint pos : CGPoint) {
-        planeSprite?.position = pos
+        planeSprite?.TouchMove(newPos: pos)
     }
     
     func touchMoved(toPoint pos : CGPoint) {
-        planeSprite?.position = pos
+        planeSprite?.TouchMove(newPos: pos)
     }
     
     func touchUp(atPoint pos : CGPoint) {
-        planeSprite?.position = pos
+        planeSprite?.TouchMove(newPos: pos)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -49,9 +66,15 @@ class PlayScene: SKScene {
         for t in touches { self.touchUp(atPoint: t.location(in: self)) }
     }
     
-    
+    // Game Loop - trigger 60FPS
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        oceanSprite?.Update()
+        islandSprite?.Update()
+        planeSprite?.Update()
+        
+        for cloud in clouds {
+            cloud.Update()
+        }
     }
     
 }

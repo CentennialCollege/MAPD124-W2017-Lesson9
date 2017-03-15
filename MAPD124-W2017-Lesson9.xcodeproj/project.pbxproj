@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E97140B01E78C1E7005FB22C /* Ocean.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97140AF1E78C1E7005FB22C /* Ocean.swift */; };
+		E97140B21E78C31A005FB22C /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97140B11E78C31A005FB22C /* GameProtocol.swift */; };
+		E97140B41E78C80C005FB22C /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97140B31E78C80C005FB22C /* Island.swift */; };
+		E97140B61E78CDB8005FB22C /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97140B51E78CDB8005FB22C /* GameObject.swift */; };
+		E97140B91E78D017005FB22C /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97140B81E78D017005FB22C /* Plane.swift */; };
+		E97140BB1E78D216005FB22C /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97140BA1E78D216005FB22C /* Cloud.swift */; };
 		E98340791E78B73600D06D10 /* PlayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E98340781E78B73600D06D10 /* PlayScene.sks */; };
 		E98340801E78BA6300D06D10 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = E983407C1E78BA6300D06D10 /* cloud.png */; };
 		E98340811E78BA6300D06D10 /* island.png in Resources */ = {isa = PBXBuildFile; fileRef = E983407D1E78BA6300D06D10 /* island.png */; };
@@ -21,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E97140AF1E78C1E7005FB22C /* Ocean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ocean.swift; sourceTree = "<group>"; };
+		E97140B11E78C31A005FB22C /* GameProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
+		E97140B31E78C80C005FB22C /* Island.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
+		E97140B51E78CDB8005FB22C /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		E97140B81E78D017005FB22C /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		E97140BA1E78D216005FB22C /* Cloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		E98340781E78B73600D06D10 /* PlayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayScene.sks; sourceTree = "<group>"; };
 		E983407C1E78BA6300D06D10 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
 		E983407D1E78BA6300D06D10 /* island.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = island.png; sourceTree = "<group>"; };
@@ -47,6 +59,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E97140B71E78CF92005FB22C /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				E97140BA1E78D216005FB22C /* Cloud.swift */,
+				E97140B81E78D017005FB22C /* Plane.swift */,
+				E97140AF1E78C1E7005FB22C /* Ocean.swift */,
+				E97140B31E78C80C005FB22C /* Island.swift */,
+				E97140B51E78CDB8005FB22C /* GameObject.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
 		E98340841E78BA6900D06D10 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,10 +106,12 @@
 				E98340781E78B73600D06D10 /* PlayScene.sks */,
 				E98340841E78BA6900D06D10 /* images */,
 				E99F49111E78AB4000F02483 /* GameViewController.swift */,
+				E97140B11E78C31A005FB22C /* GameProtocol.swift */,
 				E99F49131E78AB4000F02483 /* Main.storyboard */,
 				E99F49161E78AB4000F02483 /* Assets.xcassets */,
 				E99F49181E78AB4000F02483 /* LaunchScreen.storyboard */,
 				E99F491B1E78AB4000F02483 /* Info.plist */,
+				E97140B71E78CF92005FB22C /* Objects */,
 			);
 			path = "MAPD124-W2017-Lesson9";
 			sourceTree = "<group>";
@@ -168,8 +194,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E97140B01E78C1E7005FB22C /* Ocean.swift in Sources */,
+				E97140BB1E78D216005FB22C /* Cloud.swift in Sources */,
+				E97140B21E78C31A005FB22C /* GameProtocol.swift in Sources */,
+				E97140B61E78CDB8005FB22C /* GameObject.swift in Sources */,
+				E97140B41E78C80C005FB22C /* Island.swift in Sources */,
 				E99F49121E78AB4000F02483 /* GameViewController.swift in Sources */,
 				E99F49221E78B67B00F02483 /* PlayScene.swift in Sources */,
+				E97140B91E78D017005FB22C /* Plane.swift in Sources */,
 				E99F490A1E78AB4000F02483 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
