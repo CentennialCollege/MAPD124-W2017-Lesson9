@@ -18,6 +18,7 @@ class GameObject: SKSpriteNode, GameProtocol {
     var halfwidth:CGFloat?
     var halfheight:CGFloat?
     var randomSource:GKRandomSource?
+    var isColliding:Bool?
     
     // Constructor / initialize
     init(imageString:String) {
@@ -32,6 +33,7 @@ class GameObject: SKSpriteNode, GameProtocol {
         self.halfheight = height! * 0.5
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.randomSource = GKARC4RandomSource()
+        self.isColliding = false
         self.Start()
     }
     
