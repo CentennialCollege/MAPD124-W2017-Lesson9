@@ -16,12 +16,14 @@ var screenHeight = screenSize.height
 
 class PlayScene: SKScene {
 
+    // game related variables
     var oceanSprite:Ocean?
     var islandSprite:Island?
     var planeSprite:Plane?
     var clouds:[Cloud] = []
     var scoreLabel:UILabel?
     var livesLabel:UILabel?
+    var scoreboard:ScoreManager?
     
     override func didMove(to view: SKView) {
         oceanSprite = Ocean()
@@ -37,6 +39,8 @@ class PlayScene: SKScene {
             clouds.append(Cloud())
             self.addChild(clouds[count])
         }
+        
+        self.scoreboard = ScoreManager()
     
     
     }
@@ -75,12 +79,15 @@ class PlayScene: SKScene {
         oceanSprite?.Update()
         islandSprite?.Update()
         planeSprite?.Update()
-        CollisionManager.CheckCollision(object1: planeSprite!, object2: islandSprite!)
+        CollisionManager.CheckCollision(object1: planeSprite!, object2: islandSprite!, scoreboard: self.scoreboard!)
         
         for cloud in clouds {
             cloud.Update()
-            CollisionManager.CheckCollision(object1: planeSprite!, object2: cloud)
+            CollisionManager.CheckCollision(object1: planeSprite!, object2: cloud, scoreboard: self.scoreboard!)
         }
+        
+        self.scoreboard?.Update(scoreLabel: self.scoreLabel!,
+                                livesLabel: self.livesLabel!)
     }
     
 }

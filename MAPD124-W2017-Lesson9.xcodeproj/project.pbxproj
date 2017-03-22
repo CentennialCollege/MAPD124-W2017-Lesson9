@@ -28,6 +28,9 @@
 		E99F49221E78B67B00F02483 /* PlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F49211E78B67B00F02483 /* PlayScene.swift */; };
 		E9D69BBD1E81FEE7007D7AF6 /* Dock51.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9D69BBC1E81FEE7007D7AF6 /* Dock51.ttf */; };
 		E9D69BBF1E820287007D7AF6 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D69BBE1E820287007D7AF6 /* ScoreManager.swift */; };
+		E9D69BC41E820825007D7AF6 /* engine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9D69BC11E820825007D7AF6 /* engine.mp3 */; };
+		E9D69BC51E820825007D7AF6 /* thunder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9D69BC21E820825007D7AF6 /* thunder.mp3 */; };
+		E9D69BC61E820825007D7AF6 /* yay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9D69BC31E820825007D7AF6 /* yay.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		E99F49211E78B67B00F02483 /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScene.swift; sourceTree = "<group>"; };
 		E9D69BBC1E81FEE7007D7AF6 /* Dock51.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dock51.ttf; sourceTree = "<group>"; };
 		E9D69BBE1E820287007D7AF6 /* ScoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
+		E9D69BC11E820825007D7AF6 /* engine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = engine.mp3; sourceTree = "<group>"; };
+		E9D69BC21E820825007D7AF6 /* thunder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thunder.mp3; sourceTree = "<group>"; };
+		E9D69BC31E820825007D7AF6 /* yay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yay.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,21 +125,48 @@
 		E99F49081E78AB4000F02483 /* MAPD124-W2017-Lesson9 */ = {
 			isa = PBXGroup;
 			children = (
+				E9D69BC81E820835007D7AF6 /* Assets */,
+				E97140BE1E78D9A6005FB22C /* Managers */,
+				E97140B71E78CF92005FB22C /* Objects */,
 				E99F49091E78AB4000F02483 /* AppDelegate.swift */,
 				E99F49211E78B67B00F02483 /* PlayScene.swift */,
 				E98340781E78B73600D06D10 /* PlayScene.sks */,
-				E97140BE1E78D9A6005FB22C /* Managers */,
-				E98340841E78BA6900D06D10 /* images */,
 				E99F49111E78AB4000F02483 /* GameViewController.swift */,
-				E9D69BBC1E81FEE7007D7AF6 /* Dock51.ttf */,
 				E97140B11E78C31A005FB22C /* GameProtocol.swift */,
 				E99F49131E78AB4000F02483 /* Main.storyboard */,
 				E99F49161E78AB4000F02483 /* Assets.xcassets */,
 				E99F49181E78AB4000F02483 /* LaunchScreen.storyboard */,
 				E99F491B1E78AB4000F02483 /* Info.plist */,
-				E97140B71E78CF92005FB22C /* Objects */,
 			);
 			path = "MAPD124-W2017-Lesson9";
+			sourceTree = "<group>";
+		};
+		E9D69BC01E820811007D7AF6 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E9D69BBC1E81FEE7007D7AF6 /* Dock51.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
+		E9D69BC71E82082D007D7AF6 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				E9D69BC11E820825007D7AF6 /* engine.mp3 */,
+				E9D69BC21E820825007D7AF6 /* thunder.mp3 */,
+				E9D69BC31E820825007D7AF6 /* yay.mp3 */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
+		E9D69BC81E820835007D7AF6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E98340841E78BA6900D06D10 /* images */,
+				E9D69BC01E820811007D7AF6 /* fonts */,
+				E9D69BC71E82082D007D7AF6 /* sounds */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,12 +229,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D69BC61E820825007D7AF6 /* yay.mp3 in Resources */,
 				E98340791E78B73600D06D10 /* PlayScene.sks in Resources */,
 				E9D69BBD1E81FEE7007D7AF6 /* Dock51.ttf in Resources */,
 				E99F49151E78AB4000F02483 /* Main.storyboard in Resources */,
 				E98340821E78BA6300D06D10 /* ocean.png in Resources */,
 				E98340801E78BA6300D06D10 /* cloud.png in Resources */,
 				E98340831E78BA6300D06D10 /* plane.png in Resources */,
+				E9D69BC41E820825007D7AF6 /* engine.mp3 in Resources */,
+				E9D69BC51E820825007D7AF6 /* thunder.mp3 in Resources */,
 				E99F49171E78AB4000F02483 /* Assets.xcassets in Resources */,
 				E98340811E78BA6300D06D10 /* island.png in Resources */,
 				E99F491A1E78AB4000F02483 /* LaunchScreen.storyboard in Resources */,
