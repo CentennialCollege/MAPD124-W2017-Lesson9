@@ -12,6 +12,10 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var ScoreLabel: UILabel!
+    
+    @IBOutlet weak var LivesLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +24,8 @@ class GameViewController: UIViewController {
             if let scene = PlayScene(fileNamed: "PlayScene") {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
+                scene.livesLabel = self.LivesLabel
+                scene.scoreLabel = self.ScoreLabel
                 
                 // Present the scene
                 view.presentScene(scene)

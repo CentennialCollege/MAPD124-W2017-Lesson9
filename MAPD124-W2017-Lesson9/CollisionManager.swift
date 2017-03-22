@@ -25,6 +25,7 @@ class CollisionManager {
             if(!object2.isColliding!) {
                 if(object2.name == "island") {
                     // add points
+                    
                     // make a positive sound
                     print("island")
                 }

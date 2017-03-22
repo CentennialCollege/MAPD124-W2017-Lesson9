@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import UIKit
 
 var screenSize = UIScreen.main.bounds
 var screenWidth = screenSize.width
@@ -19,6 +20,8 @@ class PlayScene: SKScene {
     var islandSprite:Island?
     var planeSprite:Plane?
     var clouds:[Cloud] = []
+    var scoreLabel:UILabel?
+    var livesLabel:UILabel?
     
     override func didMove(to view: SKView) {
         oceanSprite = Ocean()
@@ -34,6 +37,7 @@ class PlayScene: SKScene {
             clouds.append(Cloud())
             self.addChild(clouds[count])
         }
+    
     
     }
     
